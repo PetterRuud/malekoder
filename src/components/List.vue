@@ -1,8 +1,15 @@
 <template>
   <div class="container">
-    <div class="color" v-bind:key="item.fargekode" v-for="item in items">
-      <div>Fargenavn: {{ item.fargenavn }}</div>
-      <div>Fargekode: {{ item.jotun }}</div>
+    <div
+      class="color"
+      v-bind:key="item.fargekode"
+      v-for="item in items"
+      :style="{ backgroundColor: item.hex }"
+    >
+      <div class="info">
+        <div>Fargenavn: {{ item.fargenavn }}</div>
+        <div>Fargekode: {{ item.jotun }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -43,8 +50,8 @@ export default {
   .color {
     display: block;
     width: 100%;
+    background-color: white;
     box-shadow: 0 0 0 2px white;
-    background: var(--color);
     border-radius: 2px;
 
     &:before,

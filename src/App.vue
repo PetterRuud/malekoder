@@ -15,13 +15,23 @@ export default {
 };
 </script>
 
-<style>
+<style lang="postcss">
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+  background: #2b2928;
+  padding: 2em;
+  font-family: monospace;
+  font-weight: bold;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: white;
 }
 </style>
