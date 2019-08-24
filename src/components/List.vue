@@ -7,8 +7,11 @@
       :style="{ backgroundColor: item.hex }"
     >
       <div class="info">
-        <div>Fargenavn: {{ item.fargenavn }}</div>
-        <div>Fargekode: {{ item.jotun }}</div>
+        <div>{{ item.fargenavn }}</div>
+        <div>{{ item.produktnavn }}</div>
+        <div>{{ item.jotun }} {{ item.ncs }}</div>
+        <div>{{ item.rom }}</div>
+        <div>{{ item.kjøpt }}</div>
       </div>
     </div>
   </div>
@@ -53,23 +56,11 @@ export default {
     background-color: white;
     box-shadow: 0 0 0 2px white;
     border-radius: 2px;
+    padding-top: 250px;
 
-    &:before,
-    &:after {
-      display: block;
-      background: white;
-    }
-
-    &:before {
-      content: attr(name);
-      margin-top: 4em;
-      padding: 0.5em 0.25em 0;
-    }
-
-    &:after {
-      content: attr(code);
-      color: rgba(black, 0.5);
-      padding: 0 0.25em 0.25em;
+    .info {
+      padding: 12px;
+      background-color: white;
     }
   }
 }

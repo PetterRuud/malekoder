@@ -2,7 +2,7 @@
   {
     "beskrivelse": "",
     "basenavn": "",
-    "fargenavn": "",
+    "fargenavn": "-",
     "jotun": "",
     "ncs": "S2502-R",
     "fargeopprinnelse": "NS4074",
@@ -12,7 +12,7 @@
     "blandetmed": "Jotun Colour Manager",
     "rom": "Hus",
     "rgb": "190, 183, 184",
-    "hex": ""
+    "hex": "#beb7b8"
   },
   {
     "beskrivelse": "",
@@ -31,11 +31,40 @@
   },
   {
     "beskrivelse": "",
+    "basenavn": "B",
+    "fargenavn": "Minty Breeze",
+    "jotun": "7163",
+    "ncs": "",
+    "fargeopprinnelse": "Jotun standard",
+    "fyllingsgrad": "91,5",
+    "kjøpt": "08.10.2018",
+    "produktnavn": "-",
+    "blandetmed": "Jotun Colour Manager",
+    "rom": "Vegger gang 2.etasje",
+    "rgb": "",
+    "hex": "#acb2a8"
+  },
+  {
+    "beskrivelse": "",
+    "basenavn": "B",
+    "fargenavn": "Balanse",
+    "jotun": "6325",
+    "ncs": "",
+    "fargeopprinnelse": "Jotun standard",
+    "fyllingsgrad": "91,5",
+    "kjøpt": "08.10.2018",
+    "produktnavn": "-",
+    "blandetmed": "Jotun Colour Manager",
+    "rom": "Vegger kjøkken",
+    "rgb": "",
+    "hex": "#717e79"
+  },
+  {
+    "beskrivelse": "",
     "basenavn": "C",
     "fargenavn": "Evening green",
     "jotun": "6352",
     "ncs": "",
-    "fargekode3": "BW 42 CH 25 WX 177 YX 21",
     "fargeopprinnelse": "Jotun standard",
     "fyllingsgrad": "91,5",
     "kjøpt": "26.03.2018",
@@ -43,7 +72,7 @@
     "blandetmed": "Jotun Colour Manager",
     "rom": "Vegger gang 1.etasje",
     "rgb": "194, 133, 151",
-    "hex": "#c28597"
+    "hex": "#808985"
   },
   {
     "beskrivelse": "",
@@ -51,7 +80,6 @@
     "fargenavn": "Grå harmoni",
     "jotun": "1032",
     "ncs": "",
-    "fargekode3": "BW 42 CH 25 WX 177 YX 21",
     "fargeopprinnelse": "Jotun standard",
     "fyllingsgrad": "91,5",
     "kjøpt": "26.03.2018",
@@ -59,7 +87,7 @@
     "blandetmed": "Jotun Colour Manager",
     "rom": "Vegger stue",
     "rgb": "194, 133, 151",
-    "hex": "#c28597"
+    "hex": "#aaa79f"
   },
   {
     "beskrivelse": "",
@@ -67,15 +95,14 @@
     "fargenavn": "Klassisk hvit",
     "jotun": "9918",
     "ncs": "",
-    "fargekode2": "CW 2,40 OM 0,80 YE 0,40",
     "fargeopprinnelse": "Jotun standard",
     "fyllingsgrad": "91,5",
     "kjøpt": "22.05.2019",
     "produktnavn": "SCOTTE R2",
     "blandetmed": "Jotun Colour Manager",
     "rom": "Tak stue/bad og listverk",
-    "rgb": "194, 133, 151",
-    "hex": "#c28597"
+    "rgb": "255, 255, 255",
+    "hex": "#f0efe9"
   },
   {
     "beskrivelse": "",

@@ -16,18 +16,18 @@ export default {
 </script>
 
 <style lang="postcss">
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 #app {
   min-height: 100vh;
-  background: #2b2928;
-  padding: 2em;
+  background: #1a1a1a;
   font-family: monospace;
   font-weight: bold;
+  padding: 2em;
+  font-size: 14px;
 }
 h1 {
   margin-top: 0;
