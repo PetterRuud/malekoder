@@ -4,14 +4,22 @@
       class="color"
       v-bind:key="item.fargekode"
       v-for="item in items"
-      :style="{ backgroundColor: item.hex }"
+      v-on:mouseover="onClickColor(item)"
     >
-      <div class="info">
-        <div>{{ item.fargenavn }}</div>
-        <div>{{ item.produktnavn }}</div>
-        <div>{{ item.jotun }} {{ item.ncs }}</div>
-        <div>{{ item.rom }}</div>
-        <div>{{ item.kjøpt }}</div>
+      <div class="inner">
+        <div class="front" :style="{ backgroundColor: item.hex }">
+          <div class="details">
+            <h3 class="title">{{ item.fargenavn }}</h3>
+          </div>
+        </div>
+
+        <div class="back">
+          <div>{{ item.fargenavn }}</div>
+          <div>{{ item.produktnavn }}</div>
+          <div>{{ item.jotun }} {{ item.ncs }}</div>
+          <div>{{ item.rom }}</div>
+          <div>{{ item.kjøpt }}</div>
+        </div>
       </div>
     </div>
   </div>
@@ -26,6 +34,11 @@ export default {
     return {
       items: paints
     };
+  },
+  methods: {
+     onClickColor: function(item) {
+      this.$emit('event_child', item)
+    }
   }
 };
 </script>
@@ -34,7 +47,7 @@ export default {
 .container {
   display: block;
   display: grid;
-  grid-gap: 1em;
+  grid-gap: 2em;
   place-items: center;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
 
@@ -50,17 +63,61 @@ export default {
     grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
   }
 
-  .color {
+  .color, 
+  .front, 
+  .back {
+    height: 250px;
+    width: 250px;
+    border-radius: 4px;
     display: block;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 0 0 2px white;
-    border-radius: 2px;
-    padding-top: 250px;
+    
+  }
 
-    .info {
-      padding: 12px;
-      background-color: white;
+  .color {
+    perspective: 500;
+    &:hover .inner {
+		  transform: rotateY(180deg);
+	  }
+
+    .inner {
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+
+      .front, 
+      .back {
+        backface-visibility: hidden;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, .06);
+        left: 0;
+        position: absolute;
+        top: 0;
+        border: 8px solid white;
+      }
+
+      .front {
+	      z-index: 2;
+
+        .details {
+          background-color: white;
+          bottom: 0;
+          padding: 16px 12px 12px;
+          position: absolute;
+          width: 100%;
+
+          .title {
+            color: black;
+            font-size: 1.1rem;
+            margin: 0;
+            position: relative;
+            text-transform: uppercase;
+          }
+        }
+      }
+      .back {
+        transform: rotateY(180deg);
+        background-color: white;
+        padding: 12px;
+      }
     }
   }
 }
