@@ -75,6 +75,7 @@ export default {
 
   .color {
     perspective: 500;
+    cursor: pointer;
     &:hover .inner {
 		  transform: rotateY(180deg);
 	  }
