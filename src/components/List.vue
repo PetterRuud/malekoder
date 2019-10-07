@@ -66,8 +66,8 @@ export default {
   .color, 
   .front, 
   .back {
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 100%;
     border-radius: 4px;
     display: block;
     
