@@ -49,14 +49,14 @@ export default {
   display: grid;
   grid-gap: 2em;
   place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 
   @media (min-width: 700px) {
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
   }
 
   @media (min-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
 
   @media (min-width: 1400px) {
