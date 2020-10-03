@@ -32,14 +32,14 @@ export default {
 
   data() {
     return {
-      items: paints
+      items: paints,
     };
   },
   methods: {
-     onClickColor: function(item) {
-      this.$emit('event_child', item)
-    }
-  }
+    onClickColor: function (item) {
+      this.$emit("event-child", item);
+    },
+  },
 };
 </script>
 
@@ -63,32 +63,31 @@ export default {
     grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
   }
 
-  .color, 
-  .front, 
+  .color,
+  .front,
   .back {
     height: 300px;
     width: 100%;
     border-radius: 4px;
     display: block;
-    
   }
 
   .color {
     perspective: 500;
     cursor: pointer;
     &:hover .inner {
-		  transform: rotateY(180deg);
-	  }
+      transform: rotateY(180deg);
+    }
 
     .inner {
       transition: 0.6s;
       transform-style: preserve-3d;
       position: relative;
 
-      .front, 
+      .front,
       .back {
         backface-visibility: hidden;
-        box-shadow: 0 2px 0 rgba(0, 0, 0, .06);
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
         left: 0;
         position: absolute;
         top: 0;
@@ -96,7 +95,7 @@ export default {
       }
 
       .front {
-	      z-index: 2;
+        z-index: 2;
 
         .details {
           background-color: white;
