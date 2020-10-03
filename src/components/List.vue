@@ -77,6 +77,9 @@ export default {
     cursor: pointer;
     &:hover .inner {
       transform: rotateY(180deg);
+      .back {
+        z-index: 3;
+      }
     }
 
     .inner {
@@ -110,6 +113,7 @@ export default {
             margin: 0;
             position: relative;
             text-transform: uppercase;
+            transition: opacity 0.6s;
           }
         }
       }
