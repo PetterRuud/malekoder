@@ -10,38 +10,36 @@ import List from "./components/List.vue";
 export default {
   name: "app",
   components: {
-    List
+    List,
   },
   methods: {
-		eventChild: function(item) {
-      console.log(item);
+    eventChild: function (item) {
       this.bg = item.hex;
-		},
+    },
   },
-  
+
   data() {
     return {
       bg: null,
-    }
+    };
   },
   computed: {
     cssVars() {
       return {
-         '--bg': this.bg,
+        "--bg": this.bg,
       };
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style lang="postcss">
-
 :root {
   --bg: #1a1a1a;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
